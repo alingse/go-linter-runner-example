@@ -22,7 +22,7 @@ jobs:
         uses: alingse/go-linter-runner@main
         with:
           action: run
-          go_version: "1.23"
+          go_version: "1.23.3"
           install_command: go install github.com/mgechev/revive@latest
           linter_command: revive
           includes: '["suspicious assignment to a by-value method receiver"]'
