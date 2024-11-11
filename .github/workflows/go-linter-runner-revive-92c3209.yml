@@ -1,5 +1,5 @@
-name: run-repo
-run-name: "run `revive:92c3209` ${{github.event.inputs.repo_url}}"
+name: run-revive-92c3209
+run-name: "${{github.event.inputs.repo_url}}"
 
 on:
   workflow_dispatch:
