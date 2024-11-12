@@ -24,11 +24,10 @@ jobs:
           action: run
           go_version: "1.23.3"
           install_command: go install github.com/mgechev/revive@92c320954a0c1cf775826e2b9c98aa9ca5fac3ca
-          linter_command: revive -config ${{env.GITHUB_WORKSPACE}}/revive.toml
+          linter_command: revive -config ${{ github.workspace }}/revive.toml
           includes: '["false positive"]'
           excludes: "[]"
           issue_id: 1
           repo_url: ${{ inputs.repo_url }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_WORKSPACE: ${{ env.GITHUB_WORKSPACE }}
