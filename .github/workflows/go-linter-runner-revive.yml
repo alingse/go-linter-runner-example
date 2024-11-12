@@ -24,7 +24,7 @@ jobs:
           action: run
           go_version: "1.23.3"
           install_command: go install github.com/mgechev/revive@latest
-          linter_command: revive
+          linter_command: revive -config ${{ github.workspace }}/revive.toml
           includes: '["suspicious assignment to a by-value method receiver"]'
           excludes: "[]"
           issue_id: 2
